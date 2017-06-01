@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.zero {
+  margin: 0;
+  padding: 0;
+}
+
+.h_900 {
+  min-height: 900px;
+}
+
+.w_25 {
+  width: 25%;
+}
+
+.h_auto {
+  height: auto;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  min-height: 660px;
+}
+
+.bg_green {
+  background-color: #00a65a;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.left_nav_bar {
+  float: left;
+  width: 25%;
+  background-color: #00a65a;
+  min-height: 660px;
+}
+
+.navbar {
+  padding: 10px;
+}
+
+.top_nav {
+  float: left;
+  width: 75%;
+  min-height: 40px;
+  padding: 10px;
+  background-color: aquamarine;
+}
+
+.right_col {
+  float: left;
+  min-height: 640px;
+  width: 75%;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.p5 {
+  padding: 5px;
+}
+
+.w_75 {
+  width: 75%;
+}
+
+.w16 {
+  width: 16%;
+}
+
+.w47 {
+  width: 47%;
+}
+
+.w9 {
+  width: 9%;
+}
+
+.w12 {
+  width: 12%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.white {
+  color: #FFF;
+}
+
+.nav > li {
+  padding: 5px;
+  font-size: large;
+}
+
+.nav > li > a {
+  color: white;
+}
+
+.h40{
+  min-height: 40px;
+}
+
+.center{
+  width:50%;
+  margin: 0px auto;
+}
+
+.pt150{
+  padding-top: 150px;
+}
+
+.nav > li >a:hover{
+  color: black;
+}
+
+.redAlert{
+  border-color: red;
+}
+
+
+.redFont{
+  color: red;
+}

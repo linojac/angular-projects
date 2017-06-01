@@ -1,0 +1,78 @@
+<div class="right_col" role="main" ui-view="">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2 class="fleft m0">Book List</h2>
+      <a type="button" [routerLink]="['add']" class="btn btn-default fright">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        Add
+      </a>
+    </div>
+  </div>
+  <div class="alert alert-success" *ngIf="removeSuccess" role="alert">Succesfully Removed!!</div>
+  <div>
+    <div class="w_25 fleft p5">
+
+      <div class="list-group">
+        <span>
+          <a [ngClass]="{active:currentCategory===''}" class="list-group-item" (click)="resetCategoryFilter()">All Categories</a>
+        </span>
+        <span *ngFor="let category of categories">
+          <a [ngClass]="{active:currentCategory===category}" class="list-group-item"
+             (click)="filterByCategory(category)">{{category}}</a>
+        </span>
+      </div>
+
+    </div>
+
+    <div class="w_75 fleft p5">
+
+      <div class="col-lg-6 p0 w100">
+        <div class="input-group">
+          <input type="text" id="searchBox" (keyup)="filterBySearchString()" [(ngModel)]="searchString"
+                 class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" for="searchBox">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div><!-- /input-group -->
+      </div>
+      <div class="clearfix"></div>
+      <br/>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <td class="w16">Name</td>
+          <td class="w16">Category</td>
+          <td class="w47">Description</td>
+          <td class="w9">Price</td>
+          <td class="w12">Control</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let book of filteredBooks">
+          <td class="w16">{{book.name}}</td>
+          <td class="w16">{{book.category}}</td>
+          <td class="w47">{{book.description}}</td>
+          <td class="w9">{{book.price|currency}}</td>
+          <td class="w12">
+            <a (click)="editBook(book)">
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              &nbsp;Edit
+            </a>
+            <br/>
+            <a class="redFont" (click)="removeBook(book)">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+              &nbsp;Remove
+            </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+
+  </div>
+
+</div>

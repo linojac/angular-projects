@@ -1,0 +1,19 @@
+<div class="modal-dialog w_25">
+  <div class="modal-content">
+    <div class="modal-header" *ngIf="showTitle">
+      <button type="button" class="close" (click)="close()" >&times;</button>
+      <h4 class="modal-title">{{title || 'Confirm'}}</h4>
+    </div>
+    <div class="modal-body">
+      <p>{{message || 'Are you sure?'}}</p>
+    </div>
+    <div class="modal-footer" *ngIf="!showAlertOnly">
+      <button type="button" class="btn btn-default" (click)="cancel()" >{{cancelBtnLabel}}</button>
+      <button type="button" class="btn btn-primary" (click)="confirm()">{{successBtnLabel}}</button>
+    </div>
+
+    <div class="modal-footer" *ngIf="showAlertOnly">
+      <button type="button" class="btn btn-primary" (click)="cancel()" >{{successBtnLabel}}</button>
+    </div>
+  </div>
+</div>
