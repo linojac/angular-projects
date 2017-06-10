@@ -32,7 +32,7 @@ export class ListBooksComponent implements OnInit {
 
   getCategories() {
     console.log(this.categories);
-
+    this.categories = [];
     this.books.forEach((book) => {
       if (this.categories.indexOf(book.category) === -1) {
         this.categories.push(book.category);
@@ -93,9 +93,13 @@ export class ListBooksComponent implements OnInit {
       }
     ).subscribe(isConfirmed => {
       if(isConfirmed) {
-        this.booksService.removeBook(book._id);
-        this.getBooks();
-        this.removeSuccess = true;
+        this.booksService.removeBook(book._id).subscribe(res => {
+          this.getBooks();
+          this.removeSuccess = true;
+          this.currentCategory="";
+          this.searchString = "";
+        });
+        
       }
     });
     /*if (confirm("Do you want to delete the book '" + book.name + "'")) {

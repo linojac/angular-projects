@@ -12,8 +12,8 @@
   min-height: 900px;
 }
 
-.w_25 {
-  width: 25%;
+.w_20 {
+  width: 20%;
 }
 
 .h_auto {
@@ -41,7 +41,7 @@
 
 .left_nav_bar {
   float: left;
-  width: 25%;
+  width: 20%;
   background-color: #00a65a;
   min-height: 660px;
 }
@@ -52,7 +52,7 @@
 
 .top_nav {
   float: left;
-  width: 75%;
+  width: 80%;
   min-height: 40px;
   padding: 10px;
   background-color: aquamarine;
@@ -61,7 +61,7 @@
 .right_col {
   float: left;
   min-height: 640px;
-  width: 75%;
+  width: 80%;
 }
 
 .p0 {
@@ -72,8 +72,8 @@
   padding: 5px;
 }
 
-.w_75 {
-  width: 75%;
+.w_80 {
+  width: 80%;
 }
 
 .w16 {
@@ -90,6 +90,10 @@
 
 .w12 {
   width: 12%;
+}
+
+.w60{
+  width: 60%;
 }
 
 .w100 {
@@ -137,4 +141,8 @@
 
 .redFont{
   color: red;
+}
+
+.textarea{
+  min-height: 100px;
 }

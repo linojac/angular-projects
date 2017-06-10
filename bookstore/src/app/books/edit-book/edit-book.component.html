@@ -1,4 +1,4 @@
-<div class="w_75 fleft">
+<div class="w_80 fleft">
   <div class="center pt150">
     <div class="h40">
       <a type="button" class="fright btn btn-default" (click)="listBooks()">
@@ -11,8 +11,8 @@
 
     <div class="panel panel-default">
       <div class="panel-body">
-        <h3 *ngIf="addBookFlag"> Add Book</h3>
-        <h3 *ngIf="editBookFlag"> Edit Book</h3>
+        <h3 *ngIf="action==='add'">Add Book</h3>
+        <h3 *ngIf="action==='edit'">Update Book</h3>
         <form #myForm="ngForm" class="form-horizontal" (submit)="saveOrUpdateBook(currentBook)">
           <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Name</label>

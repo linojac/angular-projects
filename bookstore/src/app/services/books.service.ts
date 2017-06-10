@@ -24,6 +24,7 @@ export class BooksService {
   }
 
   getBookById(id: string):Observable<Book> {
+    console.log("Service-"+id);
     return this.http.get("api/book/"+id).map(this.extractData).catch(this.handleError);
   }
 
@@ -44,8 +45,8 @@ export class BooksService {
     return this.http.post("api/book", book, {headers:headers}).map(this.extractData).catch(this.handleError);
   }
 
-  removeBook(id: string) {
-    return this.http.delete("api/book/"+id).subscribe(res => console.log(res));
+  removeBook(id: string):Observable<string> {
+    return this.http.delete("api/book/"+id).map(this.extractData).catch(this.handleError);
   }
 
   private handleError(error: Response | any) {

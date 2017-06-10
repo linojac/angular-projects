@@ -24,6 +24,8 @@ export class EditBookComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: Params) => {
       let id = params['id'];
+      console.log("Initiating Edit Component");
+      this.action = "add";
       if (id !== null) {
         this.getBook(id);
       } else {
@@ -57,7 +59,7 @@ export class EditBookComponent implements OnInit {
         let disposable = this.dialogService.addDialog(ConfirmPopupComponent,
           {
             title: "Success",
-            message: "Updated book'" + book.name +"' Successfully ",
+            message: "Updated book '" + book.name +"' Successfully ",
             showTitle: false,
             showAlertOnly: true
           }
@@ -67,11 +69,11 @@ export class EditBookComponent implements OnInit {
 
     } else {
       this.booksService.saveBook(book).subscribe(book => {
-        console.log("Bok saved");
+        console.log("Book saved");
         let disposable = this.dialogService.addDialog(ConfirmPopupComponent,
           {
             title: "Success",
-            message: "Book has been succesfully Added!!",
+            message: "Book Added Succesfully !!",
             showTitle: false,
             showAlertOnly: true
           }
