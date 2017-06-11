@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.float_left{
+  float: left;
+}
+.float_right{
+  float: right;
+}
+
+.width30{
+  max-width: 30%;
+  min-width: 30%;
+}
+
+.width100{
+  min-width: 100%;
+  max-width: 100%;
+}
