@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { TopNavPanelComponent } from './shared/top-nav-panel/top-nav-panel.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginPanelComponent } from './user/login-panel/login-panel.component';
+import { RegisterPanelComponent } from './user/register-panel/register-panel.component';
+import { SuccessMessagePanelComponent } from './shared/success-message-panel/success-message-panel.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { AboutUsComponent } from './shared/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { LoginPanelComponent } from './user/login-panel/login-panel.component';
     HomeComponent,
     TopNavPanelComponent,
     FooterComponent,
-    LoginPanelComponent
+    LoginPanelComponent,
+    RegisterPanelComponent,
+    SuccessMessagePanelComponent,
+    PageNotFoundComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
