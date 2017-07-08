@@ -1,4 +1,14 @@
-<div class="container-fluid float_left">
+<ul class="nav">
+  <li><h1>{{selectedRoute}}</h1><ul>
+  <li><a [routerLink]="['home']" (click)="changeRoute('Home')">Home</a></li>
+    <li><a [routerLink]="['success-stories']" (click)='changeRoute("Success Stories")'>Success Stories</a></li>
+    <li><a [routerLink]="['register']" (click)="changeRoute('Register')">Register</a></li>
+    <li><a [routerLink]="['about-us']" (click)="changeRoute('About-Us')">About Us</a></li>
+    <li><a [routerLink]="['login']" (click)="changeRoute('Login')">Login</a></li>
+  </ul></li>
+</ul>
+
+<!-- <div class="container-fluid float_left">
   <div class="navbar-header">
     <ul class="nav nav-pills">
       <li role="presentation"><a [routerLink]="['home']">Home</a></li>
@@ -10,6 +20,6 @@
   </div>
 </div>
 <div class="media100 float_right">
-  <login-panel></login-panel>
-</div>
+   <login-panel></login-panel> 
+ </div> -->
 

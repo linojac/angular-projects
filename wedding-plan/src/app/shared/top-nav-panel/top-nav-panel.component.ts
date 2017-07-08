@@ -9,7 +9,13 @@ export class TopNavPanelComponent implements OnInit {
 
   constructor() { }
 
+	selectedRoute: string;
+
   ngOnInit() {
+  	this.selectedRoute="Home";
   }
 
+  changeRoute(newRoute:string){
+  	this.selectedRoute=newRoute;
+  }
 }
